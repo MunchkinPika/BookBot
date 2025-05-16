@@ -22,7 +22,7 @@ def main():
     sorted_characters = sort_characters(character_frequencies)
 
     for item in sorted_characters:
-        print(f"'{item['char']}': {item['num']}")
+        print(f"{item['char']}: {item['num']}")
     print("============== END ===================")
 
 main()

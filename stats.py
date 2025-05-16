@@ -9,10 +9,11 @@ def count_characters(text):
     char_freq = {}
     
     for char in text:
-        if char in char_freq:
-            char_freq[char] += 1
-        else:
-            char_freq[char] = 1
+        if char.isalpha():
+            if char in char_freq:
+                char_freq[char] += 1
+            else:
+                char_freq[char] = 1
     
 
     return char_freq

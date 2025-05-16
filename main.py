@@ -1,6 +1,6 @@
 ##Bookbot main code
 
-
+import sys
 from stats import count_words, count_characters, sort_characters
 
 def get_book_text(book):
@@ -9,8 +9,12 @@ def get_book_text(book):
         return file_contents
 
 def main():
+    if len(sys.argv) != 2:
+        print("Usage: python3 main.py <path_to_book>")
+        sys.exit(1)
+
+    path_to_book = sys.argv[1]
     print("============ BOOKBOT ============")
-    path_to_book = 'books/frankenstein.txt'
     text = get_book_text(path_to_book)
     print(f"Analyzing book found at {path_to_book}...")
 
